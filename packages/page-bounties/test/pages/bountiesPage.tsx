@@ -24,10 +24,10 @@ import { BountyFactory } from '@polkadot/test-support/creation/bounties/bountyFa
 import { TypeRegistry } from '@polkadot/types/create';
 import { BountyIndex, BountyStatus } from '@polkadot/types/interfaces';
 
-import { mockBountyHooks } from '../hooks/defaults';
-import { clickButtonWithName } from '../utils/clickButtonWithName';
-import { clickElementWithTestId } from '../utils/clickElementWithTestId';
-import { clickElementWithText } from '../utils/clickElementWithText';
+import { mockBountyHooks } from '../hooks/defaults.js';
+import { clickButtonWithName } from '../utils/clickButtonWithName.js';
+import { clickElementWithTestId } from '../utils/clickElementWithTestId.js';
+import { clickElementWithText } from '../utils/clickElementWithText.js';
 
 function aGenesisHash () {
   return new TypeRegistry().createType('Hash', POLKADOT_GENESIS);
@@ -42,7 +42,7 @@ class NotYetRendered extends Error {
 }
 
 let queueExtrinsic: (value: PartialQueueTxExtrinsic) => void;
-const propose = jest.fn().mockReturnValue('mockProposeExtrinsic');
+const propose = jest.fn(() => 'mockProposeExtrinsic');
 
 interface RenderedBountiesPage {
   findAllByTestId: FindManyWithMatcher;
@@ -111,6 +111,10 @@ export class BountiesPage {
           }
         }
       },
+      isApiConnected: true,
+      isApiInitialized: true,
+      isApiReady: true,
+      isEthereum: false,
       systemName: 'substrate'
     } as unknown as ApiProps;
 
@@ -124,15 +128,15 @@ export class BountiesPage {
         <div id='tooltips' />
         <Suspense fallback='...'>
           <QueueCtx.Provider value={queue}>
-            <KeyringCtxRoot>
-              <MemoryRouter>
-                <ThemeProvider theme={lightTheme}>
-                  <ApiCtx.Provider value={mockApi}>
+            <MemoryRouter>
+              <ThemeProvider theme={lightTheme}>
+                <ApiCtx.Provider value={mockApi}>
+                  <KeyringCtxRoot>
                     <Bounties />
-                  </ApiCtx.Provider>
-                </ThemeProvider>
-              </MemoryRouter>
-            </KeyringCtxRoot>
+                  </KeyringCtxRoot>
+                </ApiCtx.Provider>
+              </ThemeProvider>
+            </MemoryRouter>
           </QueueCtx.Provider>
         </Suspense>
       </>

@@ -21,11 +21,18 @@ function makeContents (k, contents) {
 }
 
 const all = {};
-const sizes = {};
+const oversized = {};
 
 for (let dir of ['extensions', 'external', 'chains', 'nodes']) {
   const sub = path.join('packages/apps-config/src/ui/logos', dir);
+  const generated = path.join(sub, 'generated');
   const result = {};
+
+  if (fs.existsSync(generated)) {
+    fs.rmSync(generated, { recursive: true, force: true });
+  }
+
+  fs.mkdirSync(generated);
 
   fs
     .readdirSync(sub)
@@ -41,7 +48,8 @@ for (let dir of ['extensions', 'external', 'chains', 'nodes']) {
         if (!mime) {
           throw new Error(`Unable to determine mime for ${file}`);
         } else {
-          const data = `data:${mime};base64,${fs.readFileSync(full).toString('base64')}`;
+          const buf = fs.readFileSync(full);
+          const data = `data:${mime};base64,${buf.toString('base64')}`;
           const k = `${stringCamelCase(`${dir}_${nameParts.join('_')}`)}${ext.toUpperCase()}`;
           const fileprefix = `generated/${nameParts.join('.')}${ext.toUpperCase()}`;
 
@@ -49,7 +57,10 @@ for (let dir of ['extensions', 'external', 'chains', 'nodes']) {
 
           result[k] = fileprefix;
           all[k] = data;
-          sizes[k] = data.length;
+
+          if (buf.length > MAX_SIZE) {
+            oversized[k] = buf.length;
+          }
         }
       }
     });
@@ -58,7 +69,7 @@ for (let dir of ['extensions', 'external', 'chains', 'nodes']) {
       let srcs = '';
 
       for (let dir of ['endpoints', 'extensions', 'links']) {
-      const srcroot = path.join('packages/apps-config/src', dir);
+        const srcroot = path.join('packages/apps-config/src', dir);
 
         fs
           .readdirSync(srcroot)
@@ -79,7 +90,7 @@ for (let dir of ['extensions', 'external', 'chains', 'nodes']) {
         console.log('\n', notfound.length.toString().padStart(3), 'not referenced in', dir, '::\n\n\t', notfound.join(', '), '\n');
       }
 
-      fs.writeFileSync(path.join(sub, 'index.ts'), `${HEADER}${Object.keys(result).sort().map((k) => `export { ${k} } from './${result[k]}';`).join('\n')}\n`);
+      fs.writeFileSync(path.join(sub, 'index.ts'), `${HEADER}${Object.keys(result).sort().map((k) => `export { ${k} } from './${result[k]}.js';`).join('\n')}\n`);
     }
 }
 
@@ -98,28 +109,31 @@ const dupes = {};
  });
 
 if (Object.keys(dupes).length) {
-  const dupeMsg = `${Object.keys(dupes).length.toString().padStart(3)} dupes found`;
+  const errMsg = `${Object.keys(dupes).length.toString().padStart(3)} dupes found`;
 
-  console.log('\n', dupeMsg, '::\n');
+  console.log('\n', errMsg, '::\n');
 
   for (let [k, d] of Object.entries(dupes)) {
     console.log('\t', k.padStart(30), ' >> ', d.join(', '));
   }
 
-  throw new Error(`FATAL: ${dupeMsg}`);
+  console.log();
+
+  throw new Error(`FATAL: ${errMsg}. Please remove the duplicates.`);
 }
 
-const large = Object
-  .entries(sizes)
-  .sort((a, b) => b[1] - a[1])
-  .filter(([, v]) => v > MAX_SIZE);
+const numOversized = Object.keys(oversized).length;
 
-if (Object.keys(large).length) {
-  console.log('\n', `${Object.keys(large).length.toString().padStart(3)} large images found ::\n`);
+if (numOversized) {
+  const errMsg = `${numOversized.toString().padStart(3)} files with byte sizes > 48K`;
 
-  large.forEach(([k, v]) =>
-    console.log('\t', k.padStart(30), formatNumber(v).padStart(15))
-  );
+  console.log('\n', errMsg, '::\n');
+
+  for (let [k, v] of Object.entries(oversized)) {
+    console.log('\t', k.padStart(30), formatNumber(v).padStart(15), `(+${formatNumber(v - MAX_SIZE)} bytes)`)
+  }
 
   console.log();
+
+  throw new Error(`FATAL: ${errMsg}. Please resize the images.`);
 }

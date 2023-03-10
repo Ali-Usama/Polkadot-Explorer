@@ -2,23 +2,28 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { BN } from '@polkadot/util';
-import type { ExternalDef } from './types';
+import type { ExternalDef } from './types.js';
 
-import { externalStatescanSVG } from '../ui/logos/external';
+import { externalStatescanSVG } from '../ui/logos/external/index.js';
 
 export const Statescan: ExternalDef = {
   chains: {
+    Collectives: 'Collectives',
+    Kusama: 'kusama',
     Litentry: 'litentry',
+    Litmus: 'litmus',
     Statemine: 'statemine',
+    Statemint: 'statemint',
+    'Westend Collectives': 'westend-collectives',
     Westmint: 'westmint'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://${chain}.statescan.io/${path}/${data.toString()}`,
+    `https://${chain}.statescan.io/#/${path}/${data.toString()}`,
   homepage: 'https://statescan.io/',
   isActive: true,
   paths: {
-    address: 'account',
-    block: 'block'
+    address: 'accounts',
+    block: 'blocks'
   },
   ui: {
     logo: externalStatescanSVG
