@@ -1,6 +1,8 @@
 // Copyright 2017-2023 @polkadot/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+/// <reference types="@polkadot/dev-test/globals.d.ts" />
+
 import type { PalletReferendaCurve } from '@polkadot/types/lookup';
 import type { BN } from '@polkadot/util';
 
@@ -102,10 +104,6 @@ describe('curveThreshold', (): void => {
       ).toEqual('499999999');
     });
   });
-
-  // describe('Stepped', (): void => {
-
-  // });
 });
 
 describe('curveDelay', (): void => {

@@ -3,134 +3,8 @@
 
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
-<<<<<<< HEAD
-import acala from './acala';
-import ajuna from './ajuna';
-import altair from './altair';
-import apron from './apron';
-import aresGladios from './ares-gladios';
-import aresParachain from './ares-parachain';
-import astar from './astar';
-import automata from './automata';
-import bajun from './bajun';
-import basilisk from './basilisk';
-import beresheet from './beresheet';
-import bifrost from './bifrost';
-import bifrostAsgard from './bifrost-asgard';
-import bifrostParachain from './bifrost-parachain';
-import bitcountry from './bitcountry';
-import bitcountryPioneer from './bitcountry-pioneer';
-import bitcountryParachain from './bitcountry-rococo';
-import centrifuge from './centrifuge';
-import centrifugeChain from './centrifuge-chain';
-import chainx from './chainx';
-import clover from './clover';
-import cloverRococo from './clover-rococo';
-import coinversation from './coinversation';
-import competitorsClub from './competitors-club';
-import contracts from './contracts';
-import crab from './crab';
-import crownSterlingChain from './crown-sterling';
-import crust from './crust';
-import testPara from './cumulus-test-parachain';
-import darwinia from './darwinia';
-import datahighwayParachain from './datahighway';
-import dockMainnet from './dock-mainnet';
-import dockTestnet from './dock-testnet';
-import dotmog from './dotmog';
-import eave from './eave';
-import edgeware from './edgeware';
-import encointerNodeNotee from './encointer-node-notee';
-import encointerNodeTeeproxy from './encointer-node-teeproxy';
-import encointerPara from './encointer-para';
-import equilibrium from './equilibrium';
-import fantour from './fantour';
-import frequency from './frequency';
-import galital from './galital';
-import galitalParachain from './galital-parachain';
-import galois from './galois';
-import gamepower from './gamepower';
-import genshiro from './genshiro';
-import hanonycash from './hanonycash';
-import hydrate from './hydrate';
-import idavoll from './idavoll';
-import imbue from './imbue';
-import integritee from './integritee';
-import interbtc from './interbtc';
-import ipse from './ipse';
-import jupiter from './jupiter';
-import jupiterRococo from './jupiter-rococo';
-import jur from './jur';
-import khala from './khala';
-import konomi from './konomi';
-import kpron from './kpron';
-import kulupu from './kulupu';
-import kusari from './kusari';
-import kylin from './kylin';
-import laminar from './laminar';
-import litentry from './litentry';
-import logion from './logion';
-import logionParachain from './logion-parachain';
-import mangata from './mangata';
-import manta from './manta';
-import mathchain from './mathchain';
-import moonbeam from './moonbeam';
-import mybank from './mybank';
-import neatcoin from './neatcoin';
-import nftmart from './nftmart';
-import nodle from './nodle';
-import oak from './oak';
-import opal from './opal';
-import opportunity from './opportunity';
-import origintrail from './origintrail';
-import pangolin from './pangolin';
-import pangoro from './pangoro';
-import parallel from './parallel';
-import parami from './parami';
-import phoenix from './phoenix';
-import pichiu from './pichiu';
-import polkadex from './polkadex';
-import polkafoundry from './polkafoundry';
-import polymesh from './polymesh';
-import pontem from './pontem';
-import prism from './prism';
-import quartz from './quartz';
-import realis from './realis';
-import riochain from './riochain';
-import robonomics from './robonomics';
-import rootnet from './rootnet';
-import shibuya from './shibuya';
-import shiden from './shiden';
-import snowbridge from './snowbridge';
-import soraSubstrate from './soraSubstrate';
-import spanner from './spanner';
-import stafi from './stafi';
-import standard from './standard';
-import subdao from './subdao';
-import subgame from './subgame';
-import subsocial from './subsocial';
-import subspace from './subspace';
-import substrateContractsNode from './substrateContractsNode';
-import swapdex from './swapdex';
-import t0rn from './t0rn';
-import ternoa from './ternoa';
-import trustbase from './trustbase';
-import turing from './turing';
-import uart from './uart';
-import unique from './unique';
-import unitnetwork from './unitnetwork';
-import unitv from './unitv';
-import vln from './vln';
-import vlnrococo from './vln-rococo';
-import vodka from './vodka';
-import web3games from './web3games';
-import westlake from './westlake';
-import zCloak from './zCloak';
-import zeitgeist from './zeitgeist';
-import zenlink from './zenlink';
-import zero from './zero';
-import storageChain from './storage-chain';
-=======
+
+import storageChain from './node-vb.js';
 import acala from './acala.js';
 import ajuna from './ajuna.js';
 import altair from './altair.js';
@@ -160,6 +34,7 @@ import crab from './crab.js';
 import crownSterlingChain from './crown-sterling.js';
 import crust from './crust.js';
 import testPara from './cumulus-test-parachain.js';
+import curio from './curio.js';
 import darwinia from './darwinia.js';
 import datahighwayParachain from './datahighway.js';
 import dockMainnet from './dock-mainnet.js';
@@ -172,6 +47,9 @@ import encointerNodeTeeproxy from './encointer-node-teeproxy.js';
 import encointerPara from './encointer-para.js';
 import equilibrium from './equilibrium.js';
 import fantour from './fantour.js';
+// See https://github.com/polkadot-js/apps/pull/9243
+// import fragnova from './fragnova.js';
+import ferrum from './ferrum.js';
 import frequency from './frequency.js';
 import galital from './galital.js';
 import galitalParachain from './galital-parachain.js';
@@ -214,11 +92,14 @@ import pangolin from './pangolin.js';
 import pangoro from './pangoro.js';
 import parallel from './parallel.js';
 import parami from './parami.js';
+import peaq from './peaq.js';
+import pendulum from './pendulum.js';
 import phoenix from './phoenix.js';
 import pichiu from './pichiu.js';
 import polkadex from './polkadex.js';
 import polkafoundry from './polkafoundry.js';
-import polymesh from './polymesh.js';
+import polymeshMainnet from './polymesh-mainnet.js';
+import polymeshTestnet from './polymesh-testnet.js';
 import pontem from './pontem.js';
 import prism from './prism.js';
 import quartz from './quartz.js';
@@ -257,18 +138,16 @@ import zCloak from './zCloak.js';
 import zeitgeist from './zeitgeist.js';
 import zenlink from './zenlink.js';
 import zero from './zero.js';
->>>>>>> ee3d89c965903f061d48488df03a5c673c10df3b
 
 // NOTE: The mapping is done from specName in state.getRuntimeVersion
 const spec: Record<string, OverrideBundleDefinition> = {
-  'storage-chain': storageChain,
+  'node-vb': storageChain,
   Crab: crab,
   Darwinia: darwinia,
   'Darwinia Crab PC2': pangolin,
   'Darwinia PC2': pangolin,
   Equilibrium: equilibrium,
   Genshiro: genshiro,
-  'Genshiro Rococo Testnet': genshiro,
   Pangolin: pangolin,
   Pangoro: pangoro,
   VLN: vln,
@@ -276,6 +155,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   ...acala,
   ajuna,
   altair,
+  amplitude: pendulum,
   apron,
   'ares-gladios': aresGladios,
   'ares-mars': aresParachain,
@@ -304,6 +184,8 @@ const spec: Record<string, OverrideBundleDefinition> = {
   crust,
   'crust-parachain': crust,
   'cumulus-test-parachain': testPara,
+  'curio-devnet': curio,
+  'curio-testnet': curio,
   datahighway: westlake,
   'datahighway-parachain': datahighwayParachain,
   dawn: eave,
@@ -316,6 +198,11 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'encointer-node-teeproxy': encointerNodeTeeproxy,
   'encointer-parachain': encointerPara,
   fantour,
+  // See https://github.com/polkadot-js/apps/pull/9243
+  // fragnova,
+  // 'fragnova-testnet': fragnova,
+  'ferrum-parachain': ferrum,
+  foucoco: pendulum,
   frequency,
   'frequency-rococo': frequency,
   galital,
@@ -336,6 +223,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'jupiter-prep': jupiter,
   'jupiter-rococo': jupiterRococo,
   'jur-chain': jur,
+  'jur-node': jur,
   kerria: parallel,
   khala,
   'kintsugi-parachain': interbtc,
@@ -369,13 +257,19 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'origintrail-parachain': origintrail,
   parallel,
   parami,
+  'peaq-node': peaq,
+  'peaq-node-dev': peaq,
+  'peaq-node-krest': peaq,
+  pendulum,
   'phoenix-node': phoenix,
   'phoenix-parachain': phoenix,
   pichiu,
   'pioneer-runtime': bitcountryPioneer,
-  polymesh,
+  polymesh_mainnet: polymeshMainnet,
+  polymesh_testnet: polymeshTestnet,
   'pontem-node': pontem,
   prism,
+  'quantum-portal-network-parachain': ferrum,
   quartz,
   realis,
   'riochain-runtime': riochain,
@@ -387,6 +281,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   snowbridge,
   'sora-substrate': soraSubstrate,
   sora_ksm: soraSubstrate,
+  'spacewalk-standalone': pendulum,
   spanner,
   stafi,
   standard,

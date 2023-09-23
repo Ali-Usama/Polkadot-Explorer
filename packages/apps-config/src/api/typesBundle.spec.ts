@@ -1,6 +1,8 @@
 // Copyright 2017-2023 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+/// <reference types="@polkadot/dev-test/globals.d.ts" />
+
 import fs from 'node:fs';
 
 import { objectSpread } from '@polkadot/util';
@@ -35,6 +37,7 @@ export const typesBundle = ${JSON.stringify(typesBundle, null, 2)} as unknown as
 
   describe('specs', (): void => {
     for (const [k, v] of specEntries) {
+      // eslint-disable-next-line jest/expect-expect
       it(`adds ${k}`, (): void => {
         const value = objectSpread<{ derives: unknown }>({}, v);
 
@@ -47,6 +50,7 @@ export const typesBundle = ${JSON.stringify(typesBundle, null, 2)} as unknown as
 
   describe('chains', (): void => {
     for (const [k, v] of chainEntries) {
+      // eslint-disable-next-line jest/expect-expect
       it(`adds ${k}`, (): void => {
         const value = objectSpread<{ derives: unknown }>({}, v);
 

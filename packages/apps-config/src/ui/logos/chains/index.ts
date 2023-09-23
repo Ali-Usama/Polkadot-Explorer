@@ -3,7 +3,7 @@
 
 // Do not edit. Auto-generated via node scripts/imgConvert.mjs
 
-export { chains3dpassPNG } from './generated/3dpassPNG.js';
+export { chains3dpassSVG } from './generated/3dpassSVG.js';
 export { chainsAbandPNG } from './generated/abandPNG.js';
 export { chainsAcalaSVG } from './generated/acalaSVG.js';
 export { chainsAcurastPNG } from './generated/acurastPNG.js';
@@ -14,19 +14,21 @@ export { chainsBitgreenPNG } from './generated/bitgreenPNG.js';
 export { chainsBittensorPNG } from './generated/bittensorPNG.js';
 export { chainsBrainstormPNG } from './generated/brainstormPNG.js';
 export { chainsComposableFinancePNG } from './generated/composableFinancePNG.js';
-export { chainsCreditcoinPNG } from './generated/creditcoinPNG.js';
 export { chainsCreditcoinTestPNG } from './generated/creditcoin-testPNG.js';
+export { chainsCreditcoinPNG } from './generated/creditcoinPNG.js';
 export { chainsDebioSVG } from './generated/debioSVG.js';
 export { chainsDorafactoryPNG } from './generated/dorafactoryPNG.js';
 export { chainsDustyPNG } from './generated/dustyPNG.js';
 export { chainsEquilibriumSVG } from './generated/equilibriumSVG.js';
 export { chainsFerrumPNG } from './generated/ferrumPNG.js';
+export { chainsFragnovaPNG } from './generated/fragnovaPNG.js';
 export { chainsFrequencySVG } from './generated/frequencySVG.js';
 export { chainsGeminisPNG } from './generated/geminisPNG.js';
 export { chainsGenshiroSVG } from './generated/genshiroSVG.js';
 export { chainsGmJPEG } from './generated/gmJPEG.js';
 export { chainsHydratePNG } from './generated/hydratePNG.js';
 export { chainsIdiyanaleLogoWhiteSVG } from './generated/idiyanale_logo_whiteSVG.js';
+export { chainsInvarchJPEG } from './generated/invarchJPEG.js';
 export { chainsJurPNG } from './generated/jurPNG.js';
 export { chainsKaruraSVG } from './generated/karuraSVG.js';
 export { chainsKicoPNG } from './generated/kicoPNG.js';
@@ -39,12 +41,13 @@ export { chainsMangataxPNG } from './generated/mangataxPNG.js';
 export { chainsMoonsamaPNG } from './generated/moonsamaPNG.js';
 export { chainsMyriadPNG } from './generated/myriadPNG.js';
 export { chainsOakPNG } from './generated/oakPNG.js';
-export { chainsOrigintrailPNG } from './generated/origintrailPNG.js';
 export { chainsOrigintrailTestnetPNG } from './generated/origintrail-testnetPNG.js';
+export { chainsOrigintrailPNG } from './generated/origintrailPNG.js';
 export { chainsPeaqPNG } from './generated/peaqPNG.js';
 export { chainsPendulumSVG } from './generated/pendulumSVG.js';
 export { chainsPicassoSVG } from './generated/picassoSVG.js';
 export { chainsPolkadotCircleSVG } from './generated/polkadot-circleSVG.js';
+export { chainsQpnPNG } from './generated/qpnPNG.js';
 export { chainsRiodefiPNG } from './generated/riodefiPNG.js';
 export { chainsRococoSVG } from './generated/rococoSVG.js';
 export { chainsShidenPNG } from './generated/shidenPNG.js';
