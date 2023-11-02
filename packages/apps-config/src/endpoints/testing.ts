@@ -110,7 +110,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'edgeware',
     providers: {
-      JelliedOwl: 'wss://beresheet.jelliedowl.net'
+      // JelliedOwl: 'wss://beresheet.jelliedowl.net' // https://github.com/polkadot-js/apps/issues/9952
     },
     text: 'Beresheet',
     ui: {
@@ -125,6 +125,18 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Bifrost Stage Network',
     ui: {
       logo: nodesBifrostSVG
+    }
+  },
+  {
+    info: 'thebifrost-testnet',
+    providers: {
+      'Pilab #1': 'wss://public-01.testnet.bifrostnetwork.com/wss',
+      'Pilab #2': 'wss://public-02.testnet.bifrostnetwork.com/wss'
+    },
+    text: 'Bifrost Testnet',
+    ui: {
+      color: '#FF474C',
+      logo: nodesThebifrostPNG
     }
   },
   {
@@ -559,7 +571,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'metaquity',
     providers: {
-      'Metaquity Testnet': 'wss://rpc.testnet.metaquity.xyz'
+      // 'Metaquity Testnet': 'wss://rpc.testnet.metaquity.xyz' // https://github.com/polkadot-js/apps/issues/9955
     },
     text: 'Metaquity Network Testnet',
     ui: {
@@ -584,7 +596,6 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
       Blast: 'wss://moonbase-alpha.public.blastapi.io',
       Dwellir: 'wss://moonbase-rpc.dwellir.com',
       'Moonbeam Foundation': 'wss://wss.api.moonbase.moonbeam.network',
-      OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws',
       UnitedBloc: 'wss://moonbase.unitedbloc.com'
     },
     text: 'Moonbase Alpha',
@@ -630,9 +641,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'opal',
     providers: {
-      'Geo Load Balancer': 'wss://ws-opal.unique.network',
       'Unique America': 'wss://us-ws-opal.unique.network',
-      'Unique Asia': 'wss://asia-ws-opal.unique.network',
       'Unique Europe': 'wss://eu-ws-opal.unique.network'
     },
     text: 'OPAL by UNIQUE',
@@ -886,6 +895,18 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
+    info: 'subspace-gemini-3g',
+    providers: {
+      Europe: 'wss://rpc-1.gemini-3g.subspace.network/ws',
+      US: 'wss://rpc-0.gemini-3g.subspace.network/ws'
+    },
+    text: 'Subspace Gemini 3g',
+    ui: {
+      color: '#562b8e',
+      logo: nodesSubspacePNG
+    }
+  },
+  {
     info: 'subspace',
     providers: {
       // 'Subspace Network': 'wss://test-rpc.subspace.network' // https://github.com/polkadot-js/apps/issues/8598
@@ -936,18 +957,6 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Tewai',
     ui: {
       logo: nodesBitcountryPNG
-    }
-  },
-  {
-    info: 'thebifrost-testnet',
-    providers: {
-      'Pilab #1': 'wss://public-01.testnet.bifrostnetwork.com/wss',
-      'Pilab #2': 'wss://public-02.testnet.bifrostnetwork.com/wss'
-    },
-    text: 'The Bifrost Testnet',
-    ui: {
-      color: '#FF474C',
-      logo: nodesThebifrostPNG
     }
   },
   {
@@ -1004,7 +1013,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'web3games',
     providers: {
-      'Web3Games Foundation': 'wss://devnet.web3games.org'
+      // 'Web3Games Foundation': 'wss://devnet.web3games.org' // https://github.com/polkadot-js/apps/issues/9947
     },
     text: 'Web3Games',
     ui: {
