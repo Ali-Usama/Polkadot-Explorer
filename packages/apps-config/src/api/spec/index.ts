@@ -47,6 +47,7 @@ import encointerNodeTeeproxy from './encointer-node-teeproxy.js';
 import encointerPara from './encointer-para.js';
 import equilibrium from './equilibrium.js';
 import fantour from './fantour.js';
+import phronesis from './phronesis.js';
 // See https://github.com/polkadot-js/apps/pull/9243
 // import fragnova from './fragnova.js';
 import ferrum from './ferrum.js';
@@ -141,6 +142,7 @@ import zero from './zero.js';
 
 // NOTE: The mapping is done from specName in state.getRuntimeVersion
 const spec: Record<string, OverrideBundleDefinition> = {
+  'phronesis': phronesis,
   'node-vb': voiceBan,
   Crab: crab,
   Darwinia: darwinia,
