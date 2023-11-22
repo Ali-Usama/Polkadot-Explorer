@@ -9,6 +9,11 @@ import type {OverrideBundleDefinition} from '@polkadot/types/types';
 const definitions: OverrideBundleDefinition = {
     "types": [
         {
+            "PalletsOrigin": {
+              _enum: {
+                  Sudo: "Sudo",
+              }
+            },
             "minmax": [
                 0,
                 undefined
