@@ -25,7 +25,7 @@ export const ethereumChains = [
   'thebifrost-dev',
   'thebifrost-testnet',
   'thebifrost-mainnet',
-  'node-vb',
+  'p20',
   'dracones',
   'dracones-dwarf',
   'subspace-evm-domain',

@@ -4,7 +4,7 @@
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
 
-import voiceBan from './node-vb.js';
+import p20chain from './p20chain.js';
 import acala from './acala.js';
 import ajuna from './ajuna.js';
 import altair from './altair.js';
@@ -141,7 +141,7 @@ import zero from './zero.js';
 
 // NOTE: The mapping is done from specName in state.getRuntimeVersion
 const spec: Record<string, OverrideBundleDefinition> = {
-  'node-vb': voiceBan,
+  'p20': p20chain,
   Crab: crab,
   Darwinia: darwinia,
   'Darwinia Crab PC2': pangolin,
