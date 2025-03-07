@@ -3,6 +3,7 @@
 
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
+import vban from './vban.js';
 import acala from './acala.js';
 import ajuna from './ajuna.js';
 import altair from './altair.js';
@@ -145,6 +146,7 @@ import zero from './zero.js';
 
 // NOTE: The mapping is done from specName in state.getRuntimeVersion
 const spec: Record<string, OverrideBundleDefinition> = {
+  'node-vb': vban,
   Equilibrium: equilibrium,
   Genshiro: genshiro,
   VLN: vln,
