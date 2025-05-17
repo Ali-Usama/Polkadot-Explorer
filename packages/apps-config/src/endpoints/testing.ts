@@ -31,8 +31,8 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'aleph-testnet',
     providers: {
-      'Aleph Zero Foundation': 'wss://ws.test.azero.dev',
-      Dwellir: 'wss://aleph-zero-testnet-rpc.dwellir.com'
+      'Aleph Zero Foundation': 'wss://ws.test.azero.dev'
+      // Dwellir: 'wss://aleph-zero-testnet-rpc.dwellir.com' // https://github.com/polkadot-js/apps/issues/11477
       // OnFinality: 'wss://aleph-zero.api.onfinality.io/public-ws'
     },
     text: 'Aleph Zero Testnet',
@@ -620,7 +620,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
     info: 'moonbaseAlpha',
     providers: {
       Blast: 'wss://moonbase-alpha.public.blastapi.io',
-      Dwellir: 'wss://moonbase-rpc.dwellir.com',
+      Dwellir: 'wss://moonbase-rpc.n.dwellir.com',
       'Moonbeam Foundation': 'wss://wss.api.moonbase.moonbeam.network',
       // OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws', https://github.com/polkadot-js/apps/issues/11026
       RadiumBlock: 'wss://moonbase.public.curie.radiumblock.co/ws',
@@ -883,7 +883,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'subspace-gemini-1',
     providers: {
-      Europe: 'wss://eu.gemini-1b.subspace.network/ws'
+      // Europe: 'wss://eu.gemini-1b.subspace.network/ws' // https://github.com/polkadot-js/apps/issues/11393
     },
     text: 'Subspace Gemini 1',
     ui: {
@@ -894,7 +894,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'subspace-gemini-2a',
     providers: {
-      Europe: 'wss://eu-0.gemini-2a.subspace.network/ws'
+      // Europe: 'wss://eu-0.gemini-2a.subspace.network/ws' // https://github.com/polkadot-js/apps/issues/11513
     },
     text: 'Subspace Gemini 2a',
     ui: {
@@ -940,7 +940,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'subspace-gemini-3h',
     providers: {
-      US: 'wss://rpc-0.gemini-3h.subspace.network/ws'
+      // US: 'wss://rpc-0.gemini-3h.subspace.network/ws' // https://github.com/polkadot-js/apps/issues/11423
       // US2: 'wss://rpc-1.gemini-3h.subspace.network/ws' // https://github.com/polkadot-js/apps/issues/11098
     },
     text: 'Subspace Gemini 3h',
@@ -986,7 +986,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'ternoa-alphanet',
     providers: {
-      CapsuleCorp: 'wss://alphanet.ternoa.com'
+      // CapsuleCorp: 'wss://alphanet.ternoa.com' // https://github.com/polkadot-js/apps/issues/11406
     },
     text: 'Ternoa Alphanet',
     ui: {
@@ -1123,9 +1123,9 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'zkVerify-testnet',
     providers: {
-      zkVerify: 'wss://testnet-rpc.zkverify.io'
+      zkVerify: 'wss://volta-rpc.zkverify.io'
     },
-    text: 'zkVerify Testnet',
+    text: 'zkVerify Volta Testnet',
     ui: {
       color: '#15AA6A',
       logo: nodesZkVerifyPNG

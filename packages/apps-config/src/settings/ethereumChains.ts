@@ -12,6 +12,7 @@ export const ethereumChains = [
   'Crab2',
   'Darwinia Koi',
   'Darwinia2',
+  'datahaven-stagenet',
   'dracones',
   'dracones-dwarf',
   'ferrum-parachain',
@@ -35,5 +36,6 @@ export const ethereumChains = [
   'thebifrost-dev',
   'thebifrost-mainnet',
   'thebifrost-testnet',
-  'node-vb'
+  'node-vb',
+  'tscs-mainnet'
 ];
